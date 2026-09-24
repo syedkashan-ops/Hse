@@ -181,7 +181,7 @@ def make_draft():
         st.error("GEMINI_API_KEY is missing from Streamlit Secrets.")
         return
     client = genai.Client(api_key=key)
-    model = st.secrets.get("GEMINI_MODEL", "gemini-2.5-flash")
+    model = st.secrets.get("GEMINI_MODEL", "gemini-3.6-flash")
     schema = blank_schema()
     prompt = f"""{SYSTEM}
 
